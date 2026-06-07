@@ -11,11 +11,6 @@ class CustomerSupportChatbot:
         if not self.api_key:
             raise ValueError("GROQ_API_KEY environment variable not set")
         self.client = Groq(api_key=self.api_key)
-    def __init__(self):
-        self.api_key = os.getenv('GROQ_API_KEY')
-        if not self.api_key:
-            raise ValueError("GROQ_API_KEY environment variable not set")
-        self.client = Groq(api_key=self.api_key)
 
     def get_resolution(self, messages):
         try:
